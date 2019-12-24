@@ -1,0 +1,10 @@
+Aliens ----> 0.09999999999999964
+Captain America: Civil War ----> 0.3000000000000007
+The Avengers ----> 0.40000000000000036
+Guardians of the Galaxy ----> 0.40000000000000036
+The Avengers ----> 0.40000000000000036
+Star Trek ----> 0.5
+Iron Man ----> 0.5999999999999996
+Edge of Tomorrow ----> 0.5999999999999996
+Star Trek Into Darkness ----> 0.7000000000000002
+Captain America: The Winter Soldier ----> 0.7000000000000002
