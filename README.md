@@ -3,7 +3,7 @@ A movie recommender that recommends movies using the K Nearest Neighbours algori
 
 ### Requirements
 - Python version: 3.7.4
-- Python modules: pandas, numpy, operator, json
+- Python modules: pandas, numpy, operator, json, streamlit
 
 ### Dataset
 IMDB 5000 Movie Dataset downloaded from [Kaggle](https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset)
@@ -19,6 +19,10 @@ IMDB 5000 Movie Dataset downloaded from [Kaggle](https://www.kaggle.com/carolzha
 - Just run ```recommender.py``` to get the recommendations
 - The movie we are fetching recommendations for is by default set to "Avengers: Infinity War" but it can easily be changed by following the steps in ```test_movies.py```
 - The number of recommendations is by default set to 10. This can be changed by modifying the value of ```k``` in ```recommender.py```
+
+### Streamlit App
+- Added an implementation of the recommender in a [streamlit](https://docs.streamlit.io/en/latest/index.html) app. Can be found at ```app.py```
+- Options to select multiple genres and IMDb score. Also option to select number of movies recommended. Range provided is 5 to 30 movies.
 
 ### Further work to be done
 - The current implementation would work well for movies not in the dataset. It will also work for movies already in the dataset, but the same movie would also appear among the recommendations. Need to fix this.
