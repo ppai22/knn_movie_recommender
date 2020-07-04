@@ -29,14 +29,15 @@ if __name__ == '__main__':
     genres = ['Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Family',
               'Fantasy', 'Film-Noir', 'Game-Show', 'History', 'Horror', 'Music', 'Musical', 'Mystery', 'News',
               'Reality-TV', 'Romance', 'Sci-Fi', 'Short', 'Sport', 'Thriller', 'War', 'Western']
-    options = st.sidebar.multiselect('Select genres:', genres)
+    st.header('Movie Recommender')
+    options = st.multiselect('Select genres:', genres)
     if options:
-        imdb_score = st.sidebar.slider('IMDb score:', 1, 10, 8)
-        n = st.sidebar.number_input('Number of movies:', min_value=5, max_value=20, step=1)
+        imdb_score = st.slider('IMDb score:', 1, 10, 8)
+        n = st.number_input('Number of movies:', min_value=5, max_value=20, step=1)
         test_point = [1 if genre in options else 0 for genre in genres]
         test_point.append(imdb_score)
         table = knn(test_point, n)
         for movie in table:
             st.write(movie)
     else:
-        st.write("Select genres and IMDb score from the sidebar")
+        st.write("This is a simple Movie Recommender application. You can select the genres and change the IMDb score.")
