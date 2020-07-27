@@ -21,7 +21,8 @@ def knn(test_point, k):
     # Print list of 10 recommendations < Change value of k for a different number >
     table = list()
     for i in model.indices:
-        table.append(movie_titles[i][0])
+        # Returns back movie title and imdb link
+        table.append([movie_titles[i][0], movie_titles[i][2]])
     return table
 
 
@@ -37,7 +38,8 @@ if __name__ == '__main__':
         test_point = [1 if genre in options else 0 for genre in genres]
         test_point.append(imdb_score)
         table = knn(test_point, n)
-        for movie in table:
-            st.write(movie)
+        for movie, link in table:
+            # Displays movie title with link to imdb
+            st.markdown(f"[{movie}]({link})")
     else:
         st.write("This is a simple Movie Recommender application. You can select the genres and change the IMDb score.")
